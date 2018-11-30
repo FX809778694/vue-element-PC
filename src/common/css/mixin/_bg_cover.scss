@@ -1,0 +1,11 @@
+/**
+ * [bg_cover 背景图复用样式]
+ * @param  {[type]} $url  [图片地址]
+ * @param  {[type]} $bgs: cover         [大小]
+ */
+@mixin bg_cover ($url, $bgs: cover) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: $bgs;
+}

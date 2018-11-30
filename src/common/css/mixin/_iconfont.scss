@@ -1,0 +1,34 @@
+/**
+ * [阿里字体库复用]
+ * @param  {[string]} $version [版本号]
+ * @param {[string]} $http     [协议名，默认https，可选参]
+ * @param {[boolean]} $isLocal [是否引用本地font文件，默认false（引用线上），可选参]
+ */
+@mixin iconfont($version: font_502291_hijboolhzk5r8uxr, $isLocal: false, $http: https) {
+  @if $isLocal == false {
+    @font-face {
+      font-family: "iconfont";
+      src: url($http + "://at.alicdn.com/t/" + $version + ".eot");
+      src: url($http + "://at.alicdn.com/t/" + $version + ".eot?#iefix")
+          format("embedded-opentype"),
+        url($http + "://at.alicdn.com/t/" + $version + ".woff") format("woff"),
+        url($http + "://at.alicdn.com/t/" + $version + ".ttf")
+          format("truetype"),
+        url($http + "://at.alicdn.com/t/" + $version + ".svg#iconfont")
+          format("svg");
+    }
+  }
+  @if $isLocal == true {
+    @font-face {
+      font-family: "iconfont";
+      src: url("../fonts/iconfont.eot");
+      src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/iconfont.woff") format("woff"),
+        url("../fonts/iconfont.ttf") format("truetype"),
+        url("../fonts/iconfont.svg#iconfont") format("svg");
+    }
+  }
+}
+
+// 调用示例
+// @include iconfont(font_478623_5hgopu5sucgzaor);

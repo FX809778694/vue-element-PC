@@ -1,0 +1,11 @@
+/**
+ * [透明度兼容]
+ */
+@mixin _opacity($val) {
+  opacity: $val;
+
+  filter: alpha(opacity=#{$val * 100});
+}
+
+// 调用示例
+// @include _opacity(10);

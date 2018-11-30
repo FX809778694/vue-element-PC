@@ -1,0 +1,21 @@
+@mixin cus_arrow($bd_dire: 0, $bdw: 20px, $color: #168ce2) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if $bd_dire == 0 {
+    border-width: $bdw $bdw 0 $bdw;
+    border-color: $color transparent transparent transparent;
+  }
+  @if $bd_dire == 1 {
+    border-width: $bdw 0 $bdw $bdw;
+    border-color: transparent transparent transparent $color;
+  }
+  @if $bd_dire == 2 {
+    border-width: 0 $bdw $bdw $bdw;
+    border-color: transparent transparent $color transparent;
+  }
+  @if $bd_dire == 3 {
+    border-width: $bdw 0 $bdw $bdw;
+    border-color: transparent $color transparent transparent;
+  }
+}

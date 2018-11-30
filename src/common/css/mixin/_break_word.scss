@@ -1,0 +1,7 @@
+/**
+ * 解决数字英文内容过多不换行的问题
+ */
+@mixin break_word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
