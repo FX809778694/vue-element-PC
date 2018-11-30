@@ -26,3 +26,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   themeActive: 'themeActive',//主题活动
   KeyProducts: 'KeyProducts',//大中专教材
   polybasic: 'polybasic'//多元产品
+
+线上地址：http://bsb.etjbooks.com.cn/#/home
+账号： 主账号 20000 密码 test
+      子账号 10000 密码 test
